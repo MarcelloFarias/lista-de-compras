@@ -1,4 +1,4 @@
-package com.example.purchaseslist
+package com.example.purchaseslist.ui
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,6 +6,9 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.purchaseslist.model.PurchaseListAdapter
+import com.example.purchaseslist.R
+import com.example.purchaseslist.dao.PurchasesDao
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
 
 class MainActivity : AppCompatActivity() {
@@ -20,21 +23,18 @@ class MainActivity : AppCompatActivity() {
         btnNewItem = findViewById(R.id.btn_new_item)
 
         btnNewItem.setOnClickListener {
-            val RegisterPurchaseIntent = Intent(this, RegisterNewPurchaseActivity::class.java)
-            startActivity(RegisterPurchaseIntent)
+            val registerPurchaseIntent = Intent(this, RegisterNewPurchaseActivity::class.java)
+            startActivity(registerPurchaseIntent)
         }
-
-        purchasesList = findViewById(R.id.purchases_list)
-        purchasesList.adapter = PurchaseListAdapter(getPurchases(), this)
-        val layoutManager = LinearLayoutManager(this)
-        purchasesList.layoutManager = layoutManager
     }
 
-    private fun getPurchases(): List<Purchase> {
-        return listOf(
-            Purchase("Azeite", "galo extra virgem"),
-            Purchase("Doritos", "sweet chili"),
-            Purchase("Tomate", "tomate cereja turma da mônica")
-        )
+    override fun onResume() {
+        super.onResume()
+        val purchasesDao = PurchasesDao()
+
+        purchasesList = findViewById(R.id.purchases_list)
+        purchasesList.adapter = PurchaseListAdapter(purchasesDao.getAll(), this)
+        val layoutManager = LinearLayoutManager(this)
+        purchasesList.layoutManager = layoutManager
     }
 }

@@ -5,19 +5,20 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegisterNewPurchaseActivity">
+    tools:context=".ui.RegisterNewPurchaseActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="26sp"
-        android:layout_margin="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginBottom="24dp"
         android:text="@string/nova_compra"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintBottom_toTopOf="@id/purchase_name_input"/>
 
     <EditText
-        android:id="@+id/purchase_title_input"
+        android:id="@+id/purchase_name_input"
         android:inputType="text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -34,7 +35,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/digite_uma_descri_o_para_a_compra"
-        app:layout_constraintTop_toBottomOf="@id/purchase_title_input"
+        app:layout_constraintTop_toBottomOf="@id/purchase_name_input"
         android:layout_marginHorizontal="12dp"
         android:layout_marginTop="12dp"
         android:backgroundTint="@color/design_default_color_primary_variant"
@@ -47,8 +48,8 @@
         android:text="@string/salvar"
         android:textSize="16sp"
         android:backgroundTint="@color/design_default_color_primary_variant"
-        app:layout_constraintTop_toBottomOf="@id/purchase_description_input"
-        android:layout_marginTop="12dp"
+        app:layout_constraintBottom_toTopOf="@id/btn_cancel"
+        android:layout_marginBottom="12dp"
         android:layout_marginHorizontal="12dp"/>
 
     <Button
@@ -58,8 +59,8 @@
         android:text="@string/cancelar"
         android:textSize="16sp"
         android:backgroundTint="@color/material_dynamic_secondary50"
-        app:layout_constraintTop_toBottomOf="@id/btn_save"
-        android:layout_marginTop="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="12dp"
         android:layout_marginHorizontal="12dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
