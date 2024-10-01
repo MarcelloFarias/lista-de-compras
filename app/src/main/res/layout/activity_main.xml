@@ -10,10 +10,26 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="@string/lista_de_compras"
+        android:textSize="26sp"
+        android:layout_margin="12dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/purchases_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="68dp" />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/btn_new_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="26dp"
+        android:text="@string/novo_item"
+        android:backgroundTint="@color/design_default_color_primary_variant"
+        android:textColor="@color/white"
+        android:textSize="16sp"/>
 
 </RelativeLayout>
