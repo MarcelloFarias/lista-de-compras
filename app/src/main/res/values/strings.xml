@@ -4,4 +4,9 @@
     <string name="lista_de_compras">Lista de compras</string>
     <string name="teste">Teste</string>
     <string name="minha_descri_o">minha descrição</string>
+    <string name="nova_compra">Nova compra</string>
+    <string name="digite_o_t_tulo_da_compra">Digite o título da compra...</string>
+    <string name="digite_uma_descri_o_para_a_compra">Digite uma descrição para a compra...</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="salvar">Salvar</string>
 </resources>
