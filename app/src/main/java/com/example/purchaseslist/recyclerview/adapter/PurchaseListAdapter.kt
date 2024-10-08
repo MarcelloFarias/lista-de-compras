@@ -1,4 +1,4 @@
-package com.example.purchaseslist.model
+package com.example.purchaseslist.recyclerview.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -8,6 +8,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.Adapter
 import com.example.purchaseslist.R
+import com.example.purchaseslist.model.Purchase
 
 class PurchaseListAdapter(private val purchases: List<Purchase>, private val context: Context): Adapter<PurchaseListAdapter.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {

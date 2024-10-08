@@ -1,4 +1,4 @@
-package com.example.purchaseslist.ui
+package com.example.purchaseslist.ui.activity
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,7 +6,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.purchaseslist.model.PurchaseListAdapter
+import com.example.purchaseslist.recyclerview.adapter.PurchaseListAdapter
 import com.example.purchaseslist.R
 import com.example.purchaseslist.dao.PurchasesDao
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
